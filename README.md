@@ -208,4 +208,23 @@ npm run dev   # e.g. nodemon / ts-node-dev
 
 ---
 
+## 9) Access Volumn
+
+```bash
+# 1) find the container name/ID
+docker ps
+
+# 2) open an interactive shell in it (try bash first, fallback to sh)
+docker exec -it <container_name_or_id> bash
+# or
+docker exec -it <container_name_or_id> sh
+
+# 3) now inside the container, just cd to the mount point
+cd /app/storage
+ls -la
+
+```
+
+---
+
 Happy shipping! 🚀
